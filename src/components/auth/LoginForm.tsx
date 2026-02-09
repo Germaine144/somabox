@@ -36,13 +36,16 @@ const LoginForm: React.FC = () => {
   return (
     <div className="w-full min-h-screen flex ">
       {/* Left Section - Hero */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-blue relative overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        {/* Decorative circles */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full"></div>
-        <div className="absolute bottom-40 left-10 w-24 h-24 bg-white/10 rounded-full"></div>
-        <div className="absolute top-1/2 right-20 w-40 h-40 bg-white/10 rounded-full"></div>
-        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-white/10 rounded-full"></div>
+      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070')"
+          }}
+        >
+          {/* Blue gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgb(30,129,178)]/90 to-[rgb(20,100,150)]/90"></div>
+        </div>
         
         <div className="relative z-10 p-12 flex flex-col justify-between text-white">
           {/* Logo */}
