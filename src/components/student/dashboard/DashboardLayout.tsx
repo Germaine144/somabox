@@ -63,7 +63,7 @@ const StudentDashboardLayout = () => {
         {/* Logo */}
         <div className="h-16 flex items-center justify-between px-4 border-b border-gray-200">
           <Link to="/student/dashboard" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[rgb(30,129,178)] rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
             <span className="font-semibold text-gray-900">Soma Box</span>
@@ -87,7 +87,7 @@ const StudentDashboardLayout = () => {
               to={item.href}
               className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-colors ${
                 isActive(item.href)
-                  ? 'bg-blue-50 text-blue-600'
+                  ? 'bg-[rgb(30,129,178)] text-white'
                   : 'text-gray-600 hover:bg-gray-100'
               }`}
             >

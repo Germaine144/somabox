@@ -44,12 +44,14 @@ const RegisterForm: React.FC = () => {
   return (
     <div className="min-h-screen flex">
       {/* Left Section - Hero */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-teal-600 to-emerald-700 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80")' }}
-        ></div>
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full"></div>
+        <div className="absolute bottom-40 left-10 w-24 h-24 bg-white/10 rounded-full"></div>
+        <div className="absolute top-1/2 right-20 w-40 h-40 bg-white/10 rounded-full"></div>
+        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-white/10 rounded-full"></div>
+        
         <div className="relative z-10 flex flex-col justify-center items-center w-full text-white px-12 text-center">
           <h1 className="text-5xl font-bold mb-6 animate-fade-in">Welcome to SomaBox</h1>
           <p className="text-xl mb-8 opacity-90 max-w-md animate-slide-in">Your gateway to offline learning. Access courses, track progress, and learn anywhere, anytime.</p>
@@ -84,7 +86,7 @@ const RegisterForm: React.FC = () => {
               <input
                 type="text"
                 {...register('full_name')}
-                className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 ${errors.full_name ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${errors.full_name ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="John Doe"
               />
               {errors.full_name && <p className="text-red-500 text-xs mt-1">{errors.full_name.message}</p>}
@@ -95,7 +97,7 @@ const RegisterForm: React.FC = () => {
               <input
                 type="email"
                 {...register('email')}
-                className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
+                className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
                 placeholder="john@example.com"
               />
               {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
@@ -107,7 +109,7 @@ const RegisterForm: React.FC = () => {
                 <input
                   type={showPassword ? 'text' : 'password'}
                   {...register('password')}
-                  className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 pr-10 ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 pr-10 ${errors.password ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="••••••••"
                 />
                 <button
@@ -136,7 +138,7 @@ const RegisterForm: React.FC = () => {
                 <input
                   type={showConfirmPassword ? 'text' : 'password'}
                   {...register('confirmPassword')}
-                  className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 pr-10 ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'}`}
+                  className={`w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 pr-10 ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'}`}
                   placeholder="••••••••"
                 />
                 <button
@@ -163,7 +165,7 @@ const RegisterForm: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-1">Role</label>
               <select
                 {...register('role')}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white"
+                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white"
               >
                 <option value="STUDENT">Student</option>
                 <option value="TEACHER">Facilitator</option>
@@ -181,7 +183,7 @@ const RegisterForm: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-teal-600 to-emerald-600 text-white py-2.5 rounded-lg font-medium hover:from-teal-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+              className="w-full bg-gradient-to-r from-[#1e81b2] to-[#147896] text-white py-2.5 rounded-lg font-medium hover:from-[#147896] hover:to-[#0d6a8a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
             >
               {loading ? (
                 <span className="flex items-center justify-center gap-2">
@@ -198,7 +200,7 @@ const RegisterForm: React.FC = () => {
 
             <p className="text-center text-sm text-gray-600">
               Already have an account?{' '}
-              <Link to="/login" className="text-teal-600 hover:text-teal-700 font-medium">
+              <Link to="/login" className="text-[rgb(30,129,178)] hover:text-[rgb(20,100,150)] font-medium">
                 Sign in
               </Link>
             </p>

@@ -82,7 +82,7 @@ const CourseDetail = () => {
   return (
     <div className="space-y-6">
       {/* Course Header */}
-      <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-6 text-white">
+      <div className="bg-gradient-to-r from-[#1e81b2] to-[#0d5a7a] rounded-xl p-6 text-white">
         <div className="flex flex-col lg:flex-row gap-6">
           {/* Course Info */}
           <div className="flex-1">

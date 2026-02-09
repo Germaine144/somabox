@@ -36,16 +36,13 @@ const LoginForm: React.FC = () => {
   return (
     <div className="w-full min-h-screen flex ">
       {/* Left Section - Hero */}
-      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-teal-600 to-emerald-700 relative overflow-hidden">
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-blue relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070')"
-          }}
-        >
-
-        </div>
+        {/* Decorative circles */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full"></div>
+        <div className="absolute bottom-40 left-10 w-24 h-24 bg-white/10 rounded-full"></div>
+        <div className="absolute top-1/2 right-20 w-40 h-40 bg-white/10 rounded-full"></div>
+        <div className="absolute bottom-20 right-1/3 w-20 h-20 bg-white/10 rounded-full"></div>
         
         <div className="relative z-10 p-12 flex flex-col justify-between text-white">
           {/* Logo */}
@@ -65,7 +62,7 @@ const LoginForm: React.FC = () => {
           <div>
             <h2 className="text-4xl font-bold mb-4 leading-tight">
               Bridging the gap in<br />
-              <span className="text-emerald-300">global education</span>
+              <span className="text-blue-200">global education</span>
             </h2>
             <p className="text-lg text-white/90 mb-12 max-w-md">
               Access quality education anytime, anywhere. Join thousands of students transforming their future through technology.
@@ -143,7 +140,7 @@ const LoginForm: React.FC = () => {
         <div className="w-full max-w-md">
           {/* Mobile Logo */}
           <div className="lg:hidden flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center">
+            <div className="w-12 h-12 bg-[rgb(30,129,178)] rounded-lg flex items-center justify-center">
               <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
@@ -180,7 +177,7 @@ const LoginForm: React.FC = () => {
                   placeholder="Enter your email"
                   autoComplete="email"
                   className={`appearance-none block w-full px-4 py-3 border ${
-                    errors.email ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-emerald-500 focus:border-emerald-500'
+                    errors.email ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
                   } rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors`}
                   {...register('email')}
                 />
@@ -205,7 +202,7 @@ const LoginForm: React.FC = () => {
                     placeholder="Enter your password"
                     autoComplete="current-password"
                     className={`appearance-none block w-full px-4 py-3 pr-12 border ${
-                      errors.password ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-emerald-500 focus:border-emerald-500'
+                      errors.password ? 'border-red-300 focus:ring-red-500 focus:border-red-500' : 'border-gray-300 focus:ring-blue-500 focus:border-blue-500'
                     } rounded-lg shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 transition-colors`}
                     {...register('password')}
                   />
@@ -237,7 +234,7 @@ const LoginForm: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-end">
-                <Link to="/forgot-password" className="text-sm font-medium text-emerald-600 hover:text-emerald-500 transition-colors">
+                <Link to="/forgot-password" className="text-sm font-medium text-[rgb(30,129,178)] hover:text-[rgb(20,100,150)] transition-colors">
                   Forgot password?
                 </Link>
               </div>
@@ -245,7 +242,7 @@ const LoginForm: React.FC = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-[#1e81b2] to-[#147896] hover:from-[#147896] hover:to-[#0d6a8a] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
                 {loading ? (
                   <>
@@ -262,7 +259,7 @@ const LoginForm: React.FC = () => {
 
               <div className="text-center">
                 <span className="text-sm text-gray-600">Don't have an account? </span>
-                <Link to="/register" className="text-sm font-medium text-emerald-600 hover:text-emerald-500 transition-colors">
+                <Link to="/register" className="text-sm font-medium text-[rgb(30,129,178)] hover:text-[rgb(20,100,150)] transition-colors">
                   Sign up
                 </Link>
               </div>

@@ -38,13 +38,13 @@ const ProgressTracker = () => {
   const getActivityIcon = (type: string) => {
     switch (type) {
       case 'lesson_completed':
-        return <CheckIcon className="w-4 h-4 text-green-500" />;
+        return <CheckIcon className="w-4 h-4 text-blue-500" />;
       case 'quiz_completed':
-        return <TrophyIcon className="w-4 h-4 text-yellow-500" />;
+        return <TrophyIcon className="w-4 h-4 text-blue-500" />;
       case 'course_enrolled':
         return <ChartIcon className="w-4 h-4 text-blue-500" />;
       case 'course_completed':
-        return <TrophyIcon className="w-4 h-4 text-green-500" />;
+        return <TrophyIcon className="w-4 h-4 text-blue-500" />;
       default:
         return <CheckIcon className="w-4 h-4 text-gray-500" />;
     }
@@ -85,8 +85,8 @@ const ProgressTracker = () => {
         {/* Courses Completed */}
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-              <TrophyIcon className="w-5 h-5 text-green-600" />
+            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <TrophyIcon className="w-5 h-5 text-blue-600" />
             </div>
             <span className="text-2xl font-bold text-gray-900">
               {stats.totalCoursesCompleted}/{stats.totalCoursesEnrolled}
@@ -109,8 +109,8 @@ const ProgressTracker = () => {
         {/* Time Spent */}
         <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100">
           <div className="flex items-center justify-between mb-3">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-              <ClockIcon className="w-5 h-5 text-purple-600" />
+            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <ClockIcon className="w-5 h-5 text-blue-600" />
             </div>
             <span className="text-2xl font-bold text-gray-900">{stats.totalTimeSpent}</span>
           </div>
@@ -138,7 +138,7 @@ const ProgressTracker = () => {
                   cx="48"
                   cy="48"
                   r="40"
-                  stroke="#10b981"
+                  stroke="#1e81b2"
                   strokeWidth="8"
                   fill="none"
                   strokeDasharray={`${(stats.averageQuizScore / 100) * 251.2} 251.2`}
@@ -190,7 +190,7 @@ const ProgressTracker = () => {
               <span className="font-medium text-gray-900">3/5</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div className="bg-green-500 h-2 rounded-full" style={{ width: '60%' }} />
+              <div className="bg-blue-500 h-2 rounded-full" style={{ width: '60%' }} />
             </div>
           </div>
           <div>
@@ -199,7 +199,7 @@ const ProgressTracker = () => {
               <span className="font-medium text-gray-900">2/2</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div className="bg-green-500 h-2 rounded-full" style={{ width: '100%' }} />
+              <div className="bg-blue-500 h-2 rounded-full" style={{ width: '100%' }} />
             </div>
           </div>
           <div>
